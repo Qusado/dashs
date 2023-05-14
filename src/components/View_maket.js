@@ -937,7 +937,7 @@ export const View_maket = ({form}) =>{
             title.style.height = "35px";
 
 
-            if (m === 1)
+            if (m === 2)
             {
                 let menu1 = makeDiv(['col-2', 'h-100']);
                 menu1.innerHTML = code_menu_1_full_screen;
@@ -950,7 +950,7 @@ export const View_maket = ({form}) =>{
                     let filter1 = makeDiv(['col-2', 'p-2']);
                     filter1.innerHTML = code_filter_1_full_screen;
                     other_place_10.appendChild(filter1);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3', 'h-100']);
                         kpi1.innerHTML = code_kpi_1_full_screen;
                         kpi1.style.paddingRight = "2.5%";
@@ -983,7 +983,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 5) {
                         let kpi2 = makeDiv(['col-12']);
                         kpi2.innerHTML = code_kpi_2_full;
                         other_place_10.removeChild(filter1);
@@ -1019,7 +1019,7 @@ export const View_maket = ({form}) =>{
                         }
 
                     }
-                    else if (k === 3) {
+                    else if (k === 6) {
                         let kpi3 = makeDiv(['col-3', 'h-100', 'p-0']);
                         kpi3.innerHTML = code_kpi_3_full_screen;
                         other_place_10.appendChild(kpi3);
@@ -1057,7 +1057,7 @@ export const View_maket = ({form}) =>{
                     fil2.innerHTML = code_filter_2_full;
                     fil2.style.height = "35px";
                     other_place_10.appendChild(fil2);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3']);
                         kpi1.innerHTML = code_kpi_1_full_plus;
                         kpi1.style.paddingLeft = "1.5%";
@@ -1089,7 +1089,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 5) {
                         let kpi2 = makeDiv(['col-12']);
                         kpi2.innerHTML = code_kpi_2_full;
                         fil2.classList.add('mt-2');
@@ -1122,7 +1122,7 @@ export const View_maket = ({form}) =>{
                         }
 
                     }
-                    else if (k === 3) {
+                    else if (k === 6) {
                         let kpi3 = makeDiv(['col-3']);
                         kpi3.innerHTML = code_kpi_1_full_plus;
                         kpi3.style.paddingRight = "1.5%";
@@ -1206,7 +1206,7 @@ export const View_maket = ({form}) =>{
 
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 4) {
                         let kpi2 = makeDiv(['col-12']);
                         kpi2.innerHTML = code_kpi_2_full;
                         other_place_10.style.display = "block";
@@ -1239,7 +1239,7 @@ export const View_maket = ({form}) =>{
                         }
 
                     }
-                    else if (k === 3) {
+                    else if (k === 5) {
                         let kpi3 = makeDiv(['col-3']);
                         kpi3.innerHTML = code_kpi_1_full_screen;
                         kpi3.style.paddingLeft = "4%";
@@ -1273,7 +1273,7 @@ export const View_maket = ({form}) =>{
                     }
                 }
             }
-            else if (m === 2)
+            else if (m === 3)
             {
                 let menux = makeDiv(['col-12', 'row', 'p-0', 'm-0']);
                 menux.innerHTML = code_menu_2;
@@ -1285,7 +1285,7 @@ export const View_maket = ({form}) =>{
                     let filter1 = makeDiv(['col-2', 'p-0']);
                     filter1.innerHTML = code_filter_1_full_plus;
                     other_place_12.appendChild(filter1);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3']);
                         kpi1.innerHTML = code_kpi_1_full_plus;
                         kpi1.style.paddingLeft = "1.5%";
@@ -1318,7 +1318,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 5) {
                         let kpi2 = makeDiv(['col-10']);
                         kpi2.innerHTML = code_kpi_2_full;
                         kpi2.style.paddingLeft = "3%";
@@ -1352,7 +1352,7 @@ export const View_maket = ({form}) =>{
                         }
 
                     }
-                    else if (k === 3) {
+                    else if (k === 6) {
                         let kpi3 = makeDiv(['col-3']);
                         kpi3.style.paddingLeft = "8.5%";
                         kpi3.style.paddingRight = "0";
@@ -1395,7 +1395,7 @@ export const View_maket = ({form}) =>{
                     fil2.innerHTML = code_filter_2_full;
                     fil2.style.height = "35px";
                     other_place_12.appendChild(fil2);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3']);
                         kpi1.innerHTML = code_kpi_1_full;
                         kpi1.style.paddingLeft = "0%";
@@ -1428,7 +1428,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 5) {
                         let kpi2 = makeDiv(['col-12']);
                         kpi2.innerHTML = code_kpi_2_full_screen;
                         other_place_12.style.display = "block";
@@ -1460,7 +1460,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
 
-                    } else if (k === 3) {
+                    } else if (k === 6) {
                         let kpi3 = makeDiv(['col-3', 'mt-1']);
                         kpi3.innerHTML = code_kpi_1_full;
                         kpi3.style.paddingRight = "0%";
@@ -1538,7 +1538,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 4) {
                         let kpi2 = makeDiv(['col-12']);
                         kpi2.innerHTML = code_kpi_2_full_screen;
                         other_place_12.style.display = "block";
@@ -1572,7 +1572,7 @@ export const View_maket = ({form}) =>{
                         }
 
                     }
-                    else if (k === 3) {
+                    else if (k === 5) {
                         let kpi3 = makeDiv(['col-3']);
                         kpi3.innerHTML = code_kpi_1_full_plus;
                         kpi3.style.paddingLeft = "6%";
@@ -1609,7 +1609,7 @@ export const View_maket = ({form}) =>{
 
                 }
             }
-            else if (m === 5)
+            else if (m === 6)
             {
                 let menux = makeDiv(['col-12', 'row', 'p-0', 'm-0']);
                 menux.innerHTML = code_menu_5;
@@ -1621,7 +1621,7 @@ export const View_maket = ({form}) =>{
                     let filter1 = makeDiv(['col-2', 'p-0']);
                     filter1.innerHTML = code_filter_1_full_plus;
                     other_place_12.appendChild(filter1);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3']);
                         kpi1.innerHTML = code_kpi_1_full_plus;
                         kpi1.style.paddingLeft = "1.5%";
@@ -1654,7 +1654,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 5) {
                         let kpi2 = makeDiv(['col-10']);
                         kpi2.innerHTML = code_kpi_2_full;
                         kpi2.style.paddingLeft = "3%";
@@ -1688,7 +1688,7 @@ export const View_maket = ({form}) =>{
                         }
 
                     }
-                    else if (k === 3) {
+                    else if (k === 6) {
                         let kpi3 = makeDiv(['col-3']);
                         kpi3.style.paddingLeft = "8.5%";
                         kpi3.style.paddingRight = "0";
@@ -1731,7 +1731,7 @@ export const View_maket = ({form}) =>{
                     fil2.innerHTML = code_filter_2_full;
                     fil2.style.height = "35px";
                     other_place_12.appendChild(fil2);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3']);
                         kpi1.innerHTML = code_kpi_1_full;
                         kpi1.style.paddingLeft = "0%";
@@ -1764,7 +1764,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 5) {
                         let kpi2 = makeDiv(['col-12']);
                         kpi2.innerHTML = code_kpi_2_full_screen;
                         other_place_12.style.display = "block";
@@ -1796,7 +1796,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
 
-                    } else if (k === 3) {
+                    } else if (k === 6) {
                         let kpi3 = makeDiv(['col-3', 'mt-1']);
                         kpi3.innerHTML = code_kpi_1_full;
                         kpi3.style.paddingRight = "0%";
@@ -1841,7 +1841,7 @@ export const View_maket = ({form}) =>{
                     board.insertBefore(fil3, board.firstChild);
                     document.getElementById("filter_button").addEventListener("click", openHoverFilR);
                     document.getElementById("closeHoverFilR").addEventListener("click", closeHoverFilR);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3', 'mt-1']);
                         kpi1.innerHTML = code_kpi_1_full_plus;
                         kpi1.style.paddingRight = "6%";
@@ -1874,7 +1874,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 5) {
                         let kpi2 = makeDiv(['col-12']);
                         kpi2.innerHTML = code_kpi_2_full_screen;
                         other_place_12.style.display = "block";
@@ -1908,7 +1908,7 @@ export const View_maket = ({form}) =>{
                         }
 
                     }
-                    else if (k === 3) {
+                    else if (k === 6) {
                         let kpi3 = makeDiv(['col-3']);
                         kpi3.innerHTML = code_kpi_1_full_plus;
                         kpi3.style.paddingLeft = "6%";
@@ -1945,7 +1945,7 @@ export const View_maket = ({form}) =>{
 
                 }
             }
-            else if (m === 3)
+            else if (m === 4)
             {
                 let menux = makeDiv(['col-12', 'p-0', 'm-0']);
                 menux.innerHTML = code_menu_3;
@@ -1962,7 +1962,7 @@ export const View_maket = ({form}) =>{
                     other_place_12.appendChild(filter1);
                     filter1.style.zIndex = "2";
 
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3', 'mt-1']);
                         kpi1.innerHTML = code_kpi_1_full_plus;
                         kpi1.style.paddingLeft = "1.5%";
@@ -1995,7 +1995,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2)
+                    else if (k === 5)
                     {
                         let kpi2 = makeDiv(['col-10']);
                         kpi2.innerHTML = code_kpi_2_full;
@@ -2029,7 +2029,7 @@ export const View_maket = ({form}) =>{
                         }
 
                     }
-                    else if (k === 3) {
+                    else if (k === 6) {
                         let kpi3 = makeDiv(['col-3']);
                         kpi3.style.paddingLeft = "8.5%";
                         kpi3.style.paddingRight = "0";
@@ -2069,7 +2069,7 @@ export const View_maket = ({form}) =>{
                     fil2.style.height = "35px";
                     fil2.style.zIndex = "2";
                     other_place_12.appendChild(fil2);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3']);
                         kpi1.innerHTML = code_kpi_1_full;
                         kpi1.style.paddingLeft = "0%";
@@ -2101,7 +2101,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 5) {
                         let kpi2 = makeDiv(['col-12', 'm-0']);
                         kpi2.innerHTML = code_kpi_2_full_screen;
                         other_place_12.style.display = "block";
@@ -2133,7 +2133,7 @@ export const View_maket = ({form}) =>{
                         }
 
                     }
-                    else if (k === 3) {
+                    else if (k === 6) {
                         let kpi3 = makeDiv(['col-3']);
                         kpi3.innerHTML = code_kpi_1_full;
                         kpi3.style.paddingRight = "0%";
@@ -2178,7 +2178,7 @@ export const View_maket = ({form}) =>{
                     board.insertBefore(fil3, other_place_12);
                     document.getElementById("filter_button").addEventListener("click", openHoverFilR);
                     document.getElementById("closeHoverFilR").addEventListener("click", closeHoverFilR);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3']);
                         kpi1.innerHTML = code_kpi_1_full_plus;
                         kpi1.style.paddingLeft = "0.5%";
@@ -2210,7 +2210,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 5) {
                         let kpi2 = makeDiv(['col-12']);
                         kpi2.innerHTML = code_kpi_2_full_screen;
                         other_place_12.style.display = "block";
@@ -2241,7 +2241,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
 
-                    } else if (k === 3)
+                    } else if (k === 6)
                     {
                         let kpi3 = makeDiv(['col-3', 'mt-1']);
                         kpi3.innerHTML = code_kpi_1_full_plus;
@@ -2279,7 +2279,7 @@ export const View_maket = ({form}) =>{
 
 
             }
-            else if(m === 4)
+            else if(m === 5)
             {
                 let menux = makeDiv(['col-12', 'p-0', 'm-0']);
                 menux.innerHTML = code_menu_4;
@@ -2296,7 +2296,7 @@ export const View_maket = ({form}) =>{
                     other_place_12.appendChild(filter1);
                     filter1.style.zIndex = "2";
 
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3', 'mt-1']);
                         kpi1.innerHTML = code_kpi_1_full_plus;
                         kpi1.style.paddingLeft = "1.5%";
@@ -2329,7 +2329,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2)
+                    else if (k === 5)
                     {
                         let kpi2 = makeDiv(['col-10']);
                         kpi2.innerHTML = code_kpi_2_full;
@@ -2363,7 +2363,7 @@ export const View_maket = ({form}) =>{
                         }
 
                     }
-                    else if (k === 3) {
+                    else if (k === 6) {
                         let kpi3 = makeDiv(['col-3']);
                         kpi3.style.paddingLeft = "8.5%";
                         kpi3.style.paddingRight = "0";
@@ -2403,7 +2403,7 @@ export const View_maket = ({form}) =>{
                     fil2.style.height = "35px";
                     fil2.style.zIndex = "2";
                     other_place_12.appendChild(fil2);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3']);
                         kpi1.innerHTML = code_kpi_1_full;
                         kpi1.style.paddingLeft = "0%";
@@ -2435,7 +2435,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 5) {
                         let kpi2 = makeDiv(['col-12', 'm-0']);
                         kpi2.innerHTML = code_kpi_2_full_screen;
                         other_place_12.style.display = "block";
@@ -2467,7 +2467,7 @@ export const View_maket = ({form}) =>{
                         }
 
                     }
-                    else if (k === 3) {
+                    else if (k === 6) {
                         let kpi3 = makeDiv(['col-3']);
                         kpi3.innerHTML = code_kpi_1_full;
                         kpi3.style.paddingRight = "0%";
@@ -2511,7 +2511,7 @@ export const View_maket = ({form}) =>{
                     board.insertBefore(fil3, other_place_12);
                     document.getElementById("filter_button").addEventListener("click", openHoverFilR);
                     document.getElementById("closeHoverFilR").addEventListener("click", closeHoverFilR);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3']);
                         kpi1.innerHTML = code_kpi_1_full_plus;
                         kpi1.style.paddingLeft = "0.5%";
@@ -2543,7 +2543,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2)
+                    else if (k === 5)
                     {
                         let kpi2 = makeDiv(['col-12']);
                         kpi2.innerHTML = code_kpi_2_full_screen;
@@ -2576,7 +2576,7 @@ export const View_maket = ({form}) =>{
                         }
 
                     }
-                    else if (k === 3)
+                    else if (k === 6)
                     {
                         let kpi3 = makeDiv(['col-3', 'mt-1']);
                         kpi3.innerHTML = code_kpi_1_full_plus;
@@ -2614,7 +2614,7 @@ export const View_maket = ({form}) =>{
 
 
             }
-            else if (m === 6)
+            else if (m === 7)
             {
                 let menu6 = makeDiv(['col-1', 'p-0', 'm-0', 'h-100']);
                 menu6.innerHTML = code_menu_6;
@@ -2630,7 +2630,7 @@ export const View_maket = ({form}) =>{
                     filter1.innerHTML = code_filter_1_full_plus_without_back;
                     filter1.style.height = "95%";
                     for_other_columns.appendChild(filter1);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3']);
                         kpi1.innerHTML = code_kpi_1_full_plus;
                         kpi1.style.paddingLeft = "1.5%";
@@ -2662,7 +2662,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 2) {
+                    else if (k === 5) {
                         let kpi2 = makeDiv(['col-10', 'm-0']);
                         kpi2.innerHTML = code_kpi_2_to_short;
                         for_other_columns.appendChild(kpi2);
@@ -2696,7 +2696,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 3) {
+                    else if (k === 6) {
                         let kpi3 = makeDiv(['col-3']);
                         kpi3.innerHTML = code_kpi_1_full_plus;
                         kpi3.style.paddingLeft = "5%";
@@ -2736,7 +2736,7 @@ export const View_maket = ({form}) =>{
                     for_other_columns.appendChild(fil2);
                     other_place_11.style.display = "block";
                     //for_other_columns.style.display = "block";
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3', 'mt-2']);
                         kpi1.innerHTML = code_kpi_1_full;
                         kpi1.style.paddingLeft = "0";
@@ -2768,7 +2768,7 @@ export const View_maket = ({form}) =>{
                                 }
                             )
                         }
-                    } else if (k === 2)
+                    } else if (k === 5)
                     {
                         let kpi2 = makeDiv(['col-12']);
                         kpi2.innerHTML = code_kpi_2_full;
@@ -2800,7 +2800,7 @@ export const View_maket = ({form}) =>{
                             )
                         }
                     }
-                    else if (k === 3)
+                    else if (k === 6)
                     {
                         let kpi3 = makeDiv(['col-3', 'mt-2']);
                         kpi3.innerHTML = code_kpi_1_full;
@@ -2844,7 +2844,7 @@ export const View_maket = ({form}) =>{
                     board.insertBefore(fil3, board.firstChild);
                     document.getElementById("fil").addEventListener("click", openHoverFil);
                     document.getElementById("closeHoverFil").addEventListener("click", closeHoverFil);
-                    if (k === 1) {
+                    if (k === 4) {
                         let kpi1 = makeDiv(['col-3', 'mt-2']);
                         kpi1.innerHTML = code_kpi_1_full_plus;
                         kpi1.style.paddingLeft = "0";
@@ -2877,7 +2877,7 @@ export const View_maket = ({form}) =>{
                             )
 
                         }
-                    } else if (k === 2) {
+                    } else if (k === 5) {
                         let kpi2 = makeDiv(['col-12', 'mt-2']);
                         kpi2.innerHTML = code_kpi_2_full;
                         for_other_columns.appendChild(kpi2);
@@ -2910,7 +2910,7 @@ export const View_maket = ({form}) =>{
 
 
                         }
-                    } else if (k === 3) {
+                    } else if (k === 6) {
                         let kpi3 = makeDiv(['col-3']);
                         kpi3.innerHTML = code_kpi_1_full_plus;
                         kpi3.style.paddingLeft = "5%";
