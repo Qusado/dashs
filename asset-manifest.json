@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/dashs/static/css/main.2fe9a353.chunk.css",
+    "main.js": "/dashs/static/js/main.2c7b29a4.chunk.js",
+    "main.js.map": "/dashs/static/js/main.2c7b29a4.chunk.js.map",
+    "runtime-main.js": "/dashs/static/js/runtime-main.a933a480.js",
+    "runtime-main.js.map": "/dashs/static/js/runtime-main.a933a480.js.map",
+    "static/css/2.acf9cc11.chunk.css": "/dashs/static/css/2.acf9cc11.chunk.css",
+    "static/js/2.5c11048e.chunk.js": "/dashs/static/js/2.5c11048e.chunk.js",
+    "static/js/2.5c11048e.chunk.js.map": "/dashs/static/js/2.5c11048e.chunk.js.map",
+    "static/js/3.085adacd.chunk.js": "/dashs/static/js/3.085adacd.chunk.js",
+    "static/js/3.085adacd.chunk.js.map": "/dashs/static/js/3.085adacd.chunk.js.map",
+    "index.html": "/dashs/index.html",
+    "static/css/2.acf9cc11.chunk.css.map": "/dashs/static/css/2.acf9cc11.chunk.css.map",
+    "static/css/main.2fe9a353.chunk.css.map": "/dashs/static/css/main.2fe9a353.chunk.css.map",
+    "static/js/2.5c11048e.chunk.js.LICENSE.txt": "/dashs/static/js/2.5c11048e.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/dashs/static/media/fon2.a43342e8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a933a480.js",
+    "static/css/2.acf9cc11.chunk.css",
+    "static/js/2.5c11048e.chunk.js",
+    "static/css/main.2fe9a353.chunk.css",
+    "static/js/main.2c7b29a4.chunk.js"
+  ]
+}
