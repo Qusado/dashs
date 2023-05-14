@@ -141,7 +141,15 @@ export const Lay = ({form, setForm, createMaket, current_kpi_panel, setCurrent_k
     }, [getMenu, getFilter, getKpi, getVisual, getReport, getCharts])
 
 
-
+    const table = React.useRef(null);
+    const exportPDFtableWithMethod = () => {
+        let element = table.current || document.body;
+        savePDF(element, {
+            paperSize: "auto",
+            margin: 40,
+            fileName: `Table for ${new Date().getFullYear()}`
+        });
+    }
 
 
     const box = React.useRef(null);
@@ -395,164 +403,167 @@ export const Lay = ({form, setForm, createMaket, current_kpi_panel, setCurrent_k
                         <div className="col-12 px-5" style={{marginBottom:'20vh'}}>
                             <hr className="k-hr"/>
                             <h5 className="pt-0 pb-2">Предпросмотр таблицы</h5>
-                            <table className="table">
-                                <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Объект</th>
-                                    <th scope="col">Наименование показателя измерения</th>
-                                    <th scope="col">Название в отчете</th>
-                                    <th scope="col">Бизнес-условие \Формула</th>
-                                    <th scope="col">Тех. условие</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Фильтр</td>
-                                    <td>ФИО</td>
-                                    <td>Ответственный менеджер</td>
-                                    <td>Для фильтрации отчета по ответственному менеджеру (работающий над текущей слелкой</td>
-                                    <td>Чекбокс</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Фильтр</td>
-                                    <td>Дом ( или земельные участки, здания, сооружения и иные объекты)</td>
-                                    <td>Объект недвижимости</td>
-                                    <td>Выбор объекта недвижимости (земельные участки, здания, сооружения и иные объекты) Для фильтрации отчета и анализа информации по конкретному объекту недвижимости</td>
-                                    <td>Чекбокс</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Фильтр</td>
-                                    <td>ЖК, наименование</td>
-                                    <td>ЖК</td>
-                                    <td>Для фильтрации отчета по конкретному ЖК</td>
-                                    <td>Чекбокс</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Фильтр</td>
-                                    <td>Сегмент, наименование</td>
-                                    <td>Сегмент</td>
-                                    <td> Для фильтрации отчета по конкретному сегменту</td>
-                                    <td>Чекбокс</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Фильтр</td>
-                                    <td>Например: 2015</td>
-                                    <td>Год</td>
-                                    <td>Перечень годов, за которые имеется отчетность</td>
-                                    <td>Ползунок</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th>
-                                    <td>Показатель</td>
-                                    <td>-</td>
-                                    <td>Всего (руб)</td>
-                                    <td>Общая стоимость жилого комплекса</td>
-                                    <td>Сумма по fact_properties_custom_fields[Price], с условием если ПУСТО то 0</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th>
-                                    <td>Показатель</td>
-                                    <td>-</td>
-                                    <td>Всего (шт)</td>
-                                    <td>Общее кол-во квартир в жк</td>
-                                    <td>Количесвто уникальных квартир = DISTINCTCOUNT ( fact_properties_custom_fields[properties_id] )</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">8</th>
-                                    <td>Показатель</td>
-                                    <td>-</td>
-                                    <td>Цена за м2 (руб)</td>
-                                    <td>Стоимость квартиры\(Площадь без балкона + Площадь балкона * каоэффициент)</td>
-                                    <td>Отображение: числом и в процентах; Сумма по fact_properties_custom_fields[Price] делим на fact_properties_custom_fields[area_balcony] + fact_properties_custom_fields[area_without_balcony] ) *  # коэффициент при старте'[коэффициент при старте]</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">9</th>
-                                    <td>Показатель</td>
-                                    <td>-</td>
-                                    <td>Остатки (м2)</td>
-                                    <td>Сумма площади квартир,  с коэфициентом балкона 0,5. если способ покупки по ДДУ или цессии, если ДКП то с коэфициентом балкона 1 (в статусе Profitbase "свободно", "бронь" или "на оформлении")</td>
-                                    <td>{` Сумма площади квартир = ( [# AreaWithBalconyDynamic] => фильтр по статусу Profitbase = dim_properties_statuses[base_status] IN { EXECUTION } если # коэффициент при старте'[коэффициент при старте] = 0,5 в противном случае  Сумма площади квартир = ( [# AreaWithBalconyDynamic]
+                            <PDFExport paperSize="auto" margin={20} fileName={`Table for ${new Date().getFullYear()}`}>
+                                <table className="table" ref={table}>
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Объект</th>
+                                        <th scope="col">Наименование показателя измерения</th>
+                                        <th scope="col">Название в отчете</th>
+                                        <th scope="col">Бизнес-условие \Формула</th>
+                                        <th scope="col">Тех. условие</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Фильтр</td>
+                                        <td>ФИО</td>
+                                        <td>Ответственный менеджер</td>
+                                        <td>Для фильтрации отчета по ответственному менеджеру (работающий над текущей слелкой</td>
+                                        <td>Чекбокс</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Фильтр</td>
+                                        <td>Дом ( или земельные участки, здания, сооружения и иные объекты)</td>
+                                        <td>Объект недвижимости</td>
+                                        <td>Выбор объекта недвижимости (земельные участки, здания, сооружения и иные объекты) Для фильтрации отчета и анализа информации по конкретному объекту недвижимости</td>
+                                        <td>Чекбокс</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Фильтр</td>
+                                        <td>ЖК, наименование</td>
+                                        <td>ЖК</td>
+                                        <td>Для фильтрации отчета по конкретному ЖК</td>
+                                        <td>Чекбокс</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Фильтр</td>
+                                        <td>Сегмент, наименование</td>
+                                        <td>Сегмент</td>
+                                        <td> Для фильтрации отчета по конкретному сегменту</td>
+                                        <td>Чекбокс</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Фильтр</td>
+                                        <td>Например: 2015</td>
+                                        <td>Год</td>
+                                        <td>Перечень годов, за которые имеется отчетность</td>
+                                        <td>Ползунок</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td>Показатель</td>
+                                        <td>-</td>
+                                        <td>Всего (руб)</td>
+                                        <td>Общая стоимость жилого комплекса</td>
+                                        <td>Сумма по fact_properties_custom_fields[Price], с условием если ПУСТО то 0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">7</th>
+                                        <td>Показатель</td>
+                                        <td>-</td>
+                                        <td>Всего (шт)</td>
+                                        <td>Общее кол-во квартир в жк</td>
+                                        <td>Количесвто уникальных квартир = DISTINCTCOUNT ( fact_properties_custom_fields[properties_id] )</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">8</th>
+                                        <td>Показатель</td>
+                                        <td>-</td>
+                                        <td>Цена за м2 (руб)</td>
+                                        <td>Стоимость квартиры\(Площадь без балкона + Площадь балкона * каоэффициент)</td>
+                                        <td>Отображение: числом и в процентах; Сумма по fact_properties_custom_fields[Price] делим на fact_properties_custom_fields[area_balcony] + fact_properties_custom_fields[area_without_balcony] ) *  # коэффициент при старте'[коэффициент при старте]</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">9</th>
+                                        <td>Показатель</td>
+                                        <td>-</td>
+                                        <td>Остатки (м2)</td>
+                                        <td>Сумма площади квартир,  с коэфициентом балкона 0,5. если способ покупки по ДДУ или цессии, если ДКП то с коэфициентом балкона 1 (в статусе Profitbase "свободно", "бронь" или "на оформлении")</td>
+                                        <td>{` Сумма площади квартир = ( [# AreaWithBalconyDynamic] => фильтр по статусу Profitbase = dim_properties_statuses[base_status] IN { EXECUTION } если # коэффициент при старте'[коэффициент при старте] = 0,5 в противном случае  Сумма площади квартир = ( [# AreaWithBalconyDynamic]
                                         фильтруем по статусу Profitbase = dim_properties_statuses[base_status] IN { "AVAILABLE"; "BOOKED"; "EXECUTION }" `}</td>
 
-                                </tr>
-                                <tr>
-                                    <th scope="row">10</th>
-                                    <td>Показатель</td>
-                                    <td>-</td>
-                                    <td>Бюджет (руб)</td>
-                                    <td>Cтоимость проданных квартир</td>
-                                    <td>{` "Бюджет = (сумма 'fact_leads_custom_fields'[sale],  фильтр Profitbase dim_properties_statuses[base_status]
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>Показатель</td>
+                                        <td>-</td>
+                                        <td>Бюджет (руб)</td>
+                                        <td>Cтоимость проданных квартир</td>
+                                        <td>{` "Бюджет = (сумма 'fact_leads_custom_fields'[sale],  фильтр Profitbase dim_properties_statuses[base_status]
                                         IN { "SOLD"; "EXECUTION" } ) с условием если ПУСТО то 0" `}
-                                    </td>
-                                </tr>
+                                        </td>
+                                    </tr>
 
-                                <tr>
-                                    <th scope="row">11</th>
-                                    <td>Пузырьковая диаграмма рассеяния (1)</td>
-                                    <td>Штуки</td>
-                                    <td>Остатки</td>
-                                    <td>"Остаток квартир в продаже штуки.   какой объем объектов в жилом комплексе в продаже,
-                                        % - остаток от общего объема жилого комплекса"
-                                    </td>
-                                    <td>{` Количество уникальных по полю fact_properties_events_change_status[properties_id] 
+                                    <tr>
+                                        <th scope="row">11</th>
+                                        <td>Пузырьковая диаграмма рассеяния (1)</td>
+                                        <td>Штуки</td>
+                                        <td>Остатки</td>
+                                        <td>"Остаток квартир в продаже штуки.   какой объем объектов в жилом комплексе в продаже,
+                                            % - остаток от общего объема жилого комплекса"
+                                        </td>
+                                        <td>{` Количество уникальных по полю fact_properties_events_change_status[properties_id] 
                                         имеющие статус dim_properties_statuses[base_status] = { AVAILABLE; BOOKED; EXECUTION }`}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">12</th>
-                                    <td>Гистограмма (2)
-                                    </td>
-                                    <td>Дни</td>
-                                    <td>Средний срок сделки</td>
-                                    <td>Разница в днях между датой создания сделки и датой закрытия сделки в статусе Успешно реализовано по квартирам в статусе продано</td>
-                                    <td>Кол-во дней от dim_houses[dev_start] до dim_houses[dev_end] / последний день для выбраного месяца = DAY ( EOMONTH ( MIN ( 'Dim_Date'[Date] ); 0 ) )
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">13</th>
-                                    <td>Гистограмма (3)
-                                    </td>
-                                    <td>Месяца</td>
-                                    <td>Срок строительства</td>
-                                    <td>Дата окончания строительства - Дата начала строительства</td>
-                                    <td>Кол-во дней от dim_houses[dev_start] до dim_houses[dev_end] / последний день для выбраного месяца = DAY ( EOMONTH ( MIN ( 'Dim_Date'[Date] ); 0 ) )</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">14</th>
-                                    <td>Горизонтальная гистограмма (4)
-                                    </td>
-                                    <td>М2</td>
-                                    <td>Количество проданных квартир</td>
-                                    <td>Сколько м2 продали на дату анализа</td>
-                                    <td>м2 площадь с коэф. = (fact_properties_custom_fields[area_balcony] + fact_properties_custom_fields[area_without_balcony] ) *  # коэффициент при старте'[коэффициент при старте]); фильтр по статусу Profitbase = dim_properties_statuses[base_status] = "SOLD"</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">15</th>
-                                    <td>Гистограмма с групировкой (5)
-                                    </td>
-                                    <td>М2</td>
-                                    <td>Усредненный темп продаж</td>
-                                    <td>Сколько планируем продавать в среднем  в месяц</td>
-                                    <td>м2 площадь с коэф. = ((fact_properties_custom_fields[area_balcony] + fact_properties_custom_fields[area_without_balcony] ) *  # коэффициент при старте'[коэффициент при старте]); фильтр по статусу Profitbase = dim_properties_statuses[base_status] = "SOLD") / Срок продаж мес = (dim_houses[sales_start] до dim_houses[dev_end] / последний день для выбраного месяца = DAY ( EOMONTH ( MIN ( 'Dim_Date'[Date] ); 0 ) ) )</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">16</th>
-                                    <td>Круговая диаграмма (6)
-                                    </td>
-                                    <td></td>
-                                    <td>Остаток по сегментам</td>
-                                    <td> визуальное отображения остатка квартир  (руб, м2, шт)</td>
-                                    <td>"В зависимости от выбранного типа (руб; шт; м)
-                                        выводится ранее описанные: [# Остатки руб];  [# Остатки шт]; [# Остатки м2]"
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">12</th>
+                                        <td>Гистограмма (2)
+                                        </td>
+                                        <td>Дни</td>
+                                        <td>Средний срок сделки</td>
+                                        <td>Разница в днях между датой создания сделки и датой закрытия сделки в статусе Успешно реализовано по квартирам в статусе продано</td>
+                                        <td>Кол-во дней от dim_houses[dev_start] до dim_houses[dev_end] / последний день для выбраного месяца = DAY ( EOMONTH ( MIN ( 'Dim_Date'[Date] ); 0 ) )
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">13</th>
+                                        <td>Гистограмма (3)
+                                        </td>
+                                        <td>Месяца</td>
+                                        <td>Срок строительства</td>
+                                        <td>Дата окончания строительства - Дата начала строительства</td>
+                                        <td>Кол-во дней от dim_houses[dev_start] до dim_houses[dev_end] / последний день для выбраного месяца = DAY ( EOMONTH ( MIN ( 'Dim_Date'[Date] ); 0 ) )</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">14</th>
+                                        <td>Горизонтальная гистограмма (4)
+                                        </td>
+                                        <td>М2</td>
+                                        <td>Количество проданных квартир</td>
+                                        <td>Сколько м2 продали на дату анализа</td>
+                                        <td>м2 площадь с коэф. = (fact_properties_custom_fields[area_balcony] + fact_properties_custom_fields[area_without_balcony] ) *  # коэффициент при старте'[коэффициент при старте]); фильтр по статусу Profitbase = dim_properties_statuses[base_status] = "SOLD"</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">15</th>
+                                        <td>Гистограмма с групировкой (5)
+                                        </td>
+                                        <td>М2</td>
+                                        <td>Усредненный темп продаж</td>
+                                        <td>Сколько планируем продавать в среднем  в месяц</td>
+                                        <td>м2 площадь с коэф. = ((fact_properties_custom_fields[area_balcony] + fact_properties_custom_fields[area_without_balcony] ) *  # коэффициент при старте'[коэффициент при старте]); фильтр по статусу Profitbase = dim_properties_statuses[base_status] = "SOLD") / Срок продаж мес = (dim_houses[sales_start] до dim_houses[dev_end] / последний день для выбраного месяца = DAY ( EOMONTH ( MIN ( 'Dim_Date'[Date] ); 0 ) ) )</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">16</th>
+                                        <td>Круговая диаграмма (6)
+                                        </td>
+                                        <td></td>
+                                        <td>Остаток по сегментам</td>
+                                        <td> визуальное отображения остатка квартир  (руб, м2, шт)</td>
+                                        <td>"В зависимости от выбранного типа (руб; шт; м)
+                                            выводится ранее описанные: [# Остатки руб];  [# Остатки шт]; [# Остатки м2]"
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </PDFExport>
+
                         </div>
                     </div>
                 </div>
@@ -567,7 +578,7 @@ export const Lay = ({form, setForm, createMaket, current_kpi_panel, setCurrent_k
                         <i className="fas fa-file-download"></i> Скачать прототип</button>
                     <button type="button" name="next"
                             className="col-3 save_btn action-button shadow"
-                            onClick={exportPDFWithMethod}
+                            onClick={exportPDFtableWithMethod}
                     >
                         <i className="fas fa-file-download"></i> Скачать таблицу</button>
                 </div>

@@ -38,7 +38,7 @@ export const Menu = ({form, setForm}) =>{
 
     if(document.getElementsByClassName("shadow-5-strong")) {
 
-        console.log(document.getElementsByClassName("praon30")[0]);
+       // console.log(document.getElementsByClassName("praon30")[0]);
     }
 
 

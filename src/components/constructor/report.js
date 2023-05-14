@@ -23,6 +23,8 @@ export const Report = ({form, setForm}) =>{
         {id:6, items:'', title:""}
     ]);
 
+    const [current_graph, setCurrent_graph] = useState();
+
     const getReports = useCallback(async ()=>{
         try{
             const fetched = await $host.get(`/api/report`,  {
@@ -191,10 +193,12 @@ export const Report = ({form, setForm}) =>{
     }
 
 
-    clearAfterSave();
+    //clearAfterSave();
 
 
     const openModal = event => {
+        var id = event.target.id.split('t')[1];
+        setCurrent_graph(id);
         setModalViewVisualActive(true);
     }
 
@@ -275,7 +279,7 @@ export const Report = ({form, setForm}) =>{
                                                              onDrop={(e)=> drop(e)}
                                                         >
                                                         </div>
-                                                        <input type="button" className="btn btn-sm mx-2 mt-1" id="input1" value="описание графика" onClick={(e)=>openModal(e)} style={{fontFamily: "montserrat", backgroundColor:"#FF5100CC", color:"white"}}/>
+                                                        <input type="button" className="btn btn-sm mx-2 mt-1" id="input2" value="описание графика" onClick={(e)=>openModal(e)} style={{fontFamily: "montserrat", backgroundColor:"#FF5100CC", color:"white"}}/>
 
                                                     </div>
                                                     <div className="col-4 mb-2" id="3" style={{height:"38%", paddingLeft: "23px", paddingRight:"0px"}}>
@@ -286,7 +290,7 @@ export const Report = ({form, setForm}) =>{
                                                              onDrop={(e)=> drop(e)}
                                                         >
                                                         </div>
-                                                        <input type="button" className="btn btn-sm mx-2 mt-1" id="input1" value="описание графика" onClick={(e)=>openModal(e)} style={{fontFamily: "montserrat", backgroundColor:"#FF5100CC", color:"white"}}/>
+                                                        <input type="button" className="btn btn-sm mx-2 mt-1" id="input3" value="описание графика" onClick={(e)=>openModal(e)} style={{fontFamily: "montserrat", backgroundColor:"#FF5100CC", color:"white"}}/>
 
                                                     </div>
                                                     <div className="col-4 mb-2" id="4" style={{height:"38%", paddingLeft: "30px", paddingRight:"1px"}}>
@@ -298,7 +302,7 @@ export const Report = ({form, setForm}) =>{
                                                              onDrop={(e)=> drop(e)}
                                                         >
                                                         </div>
-                                                        <input type="button" className="btn btn-sm mx-1 mt-1" id="input1" value="описание графика" onClick={(e)=>openModal(e)} style={{fontFamily: "montserrat", backgroundColor:"#FF5100CC", color:"white"}}/>
+                                                        <input type="button" className="btn btn-sm mx-1 mt-1" id="input4" value="описание графика" onClick={(e)=>openModal(e)} style={{fontFamily: "montserrat", backgroundColor:"#FF5100CC", color:"white"}}/>
 
                                                     </div>
                                                     <div className="col-4 mb-2" id="5" style={{height:"38%", paddingLeft: "23px", paddingRight:"1px"}}>
@@ -309,7 +313,7 @@ export const Report = ({form, setForm}) =>{
                                                              onDrop={(e)=> drop(e)}
                                                         >
                                                         </div>
-                                                        <input type="button" className="btn btn-sm mx-2 mt-1" id="input1" value="описание графика" onClick={(e)=>openModal(e)} style={{fontFamily: "montserrat", backgroundColor:"#FF5100CC", color:"white"}}/>
+                                                        <input type="button" className="btn btn-sm mx-2 mt-1" id="input5" value="описание графика" onClick={(e)=>openModal(e)} style={{fontFamily: "montserrat", backgroundColor:"#FF5100CC", color:"white"}}/>
 
                                                     </div>
                                                     <div className="col-4 mb-2" id="6" style={{height:"38%", paddingLeft: "23px", paddingRight:"0px"}}>
@@ -321,7 +325,7 @@ export const Report = ({form, setForm}) =>{
                                                              onDrop={(e)=> drop(e)}
                                                         >
                                                         </div>
-                                                        <input type="button" className="btn btn-sm mx-2 mt-1" id="input1" value="описание графика" onClick={(e)=>openModal(e)} style={{fontFamily: "montserrat", backgroundColor:"#FF5100CC", color:"white"}}/>
+                                                        <input type="button" className="btn btn-sm mx-2 mt-1" id="input6" value="описание графика" onClick={(e)=>openModal(e)} style={{fontFamily: "montserrat", backgroundColor:"#FF5100CC", color:"white"}}/>
 
                                                     </div>
                                                 </div>
@@ -366,7 +370,7 @@ export const Report = ({form, setForm}) =>{
                     </div>
                 {/*</div>*/}
             </div>
-            <Visual_modal form={form} setForm={setForm} current_report={current_report} setVisual_active={setModalViewVisualActive} visual_active={modalViewVisualActive}/>
+            <Visual_modal form={form} current_graph={current_graph} setForm={setForm} current_report={current_report} setVisual_active={setModalViewVisualActive} visual_active={modalViewVisualActive} />
             <div className="button_place">
                 <div className="row col-12 justify-content-end py-2">
                     <input type="button" name="previous" className="previous action-button shadow" value="Вернуться"/>

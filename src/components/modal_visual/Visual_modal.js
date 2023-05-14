@@ -6,9 +6,9 @@ import {AuthContext} from "../../context/Auth.Context";
 import {$host} from "../../http";
 
 
-export const Visual_modal = ({form, setForm, visual_active, setVisual_active, current_report}) => {
+export const Visual_modal = ({form, current_graph, setForm, visual_active, setVisual_active, current_report}) => {
 
-    const report_id = current_report.report_id;
+    const report_id = current_graph;
     const {token} = useContext(AuthContext);
     const {request, loading} = useHttp();
     const [graphs, setGraphs] = useState();
@@ -45,7 +45,7 @@ export const Visual_modal = ({form, setForm, visual_active, setVisual_active, cu
                 <div className="card m-4 rounded shadow-sm p-3" style={{backgroundColor: "#efefef", width:"40vw"}}>
                     <div className="row justify-content-md-between">
                         <div className="col-10">
-                            <p><strong>График 1 </strong></p>
+                            <p><strong>График {report_id}</strong></p>
                         </div>
                     </div>
                     <div className="row">
