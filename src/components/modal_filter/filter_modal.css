@@ -1,0 +1,117 @@
+.modal_f{
+    height: 90vh;
+    width: 100vw;
+    background-color: rgba(0,0,0, 0.4);
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+
+.modal_f.active{
+    opacity: 1;
+    pointer-events: all;
+    z-index: 15;
+}
+
+.modal_f__content{
+    padding: 20px;
+    background-color: white;
+    transform: scale(0.5);
+    transition: 0.4s all;
+    /*height: 84vh;*/
+    /*width: 60vw;*/
+    border-radius: 12px;
+    overflow-y: hidden;
+}
+.modal_f__content.active{
+    transform: scale(1);
+}
+
+.close_modal{
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 0;
+    padding-top: 5px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: rgba(0,0,0,0.7);
+    font-size: 2em;
+}
+.big_card{
+    background-color: #6e6cd9;
+    border-radius: 10px;
+}
+.current_kpi_card{
+    background-color: #d1d8e2;
+}
+
+.card_collect {
+    height: auto;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
+    -o-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+.card_collect::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+.card_collect::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,0.5);
+}
+.card_collect input{
+    display: none;
+}
+
+.current_kpi_card{
+    opacity: 0.9!important;
+    transform: scale(1.05);
+}
+.choise_kpi{
+    opacity: 0.3;
+    alignment: center;
+    width: 100%;
+}
+.choise_kpi card {
+    cursor: pointer;
+}
+.choise_kpi:hover{
+    opacity: 0.9!important;
+    transform: scale(1.05);
+}
+
+.green_btn
+{
+    border-radius: 6px;
+    /*background-color: white;*/
+    background-color: #6E6CD9FF;
+    color: white;
+    font-family: "Montserrat Medium";
+    text-transform: uppercase;
+    border: white 0px;
+    height: 40px;
+    width: 15vw!important;
+}
+.green_btn:hover
+{
+    background-color: white;
+    color: #6E6CD9FF;
+}

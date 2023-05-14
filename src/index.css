@@ -1,0 +1,656 @@
+
+/*@import '~mdb-ui-kit/css/mdb.min.css';*/
+/*.content {*/
+/*  !*text-align:center;*!*/
+/*  width: 100%;*/
+/*  font-family: Montserrat;*/
+/*}*/
+
+/*!*main grid*!*/
+/*.status_bar {*/
+/*.status_bar {*/
+/*  height: 17vh;*/
+/*}*/
+
+/*.chapter {*/
+/*  */
+/*  margin-top: 60px;*/
+/*  margin-bottom: 22vh;*/
+/*  height: 72vh;*/
+/*}*/
+
+/*.buttt {*/
+/*  position: absolute;*/
+/*  bottom: 0px;*/
+/*}*/
+
+/*.lox {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*}*/
+
+/*.lox2 {*/
+/*  flex-grow: 3;*/
+/*  position: relative;*/
+/*}*/
+
+/*.lox3{*/
+/*  vertical-align: center;*/
+/*}*/
+
+/*!*main grid*!*/
+/*!*auth*!*/
+
+/*.fon_auth button{*/
+/*  height: 50px;*/
+/*  margin-left: 20px;*/
+/*  margin-right: 15px ;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+
+/*!*auth*!*/
+
+
+/*.BackPic {*/
+/*  z-index: 0;*/
+/*  background: no-repeat center/60% url("images/fon3.png");*/
+/*  !*background-color: #6E6CD9;*!*/
+/*  height: 70vh;*/
+/*}*/
+
+/*.main_first_phrase {*/
+/*  padding-top: 10%;*/
+/*  padding-bottom: 10%;*/
+/*  font-family: "Montserrat ExtraBold";*/
+/*}*/
+
+/*.main_second_phrase {*/
+/*  font-family: "Montserrat SemiBold";*/
+/*}*/
+
+/*.bigbut {*/
+/*  width: 45vw;*/
+/*  height: 10vh;*/
+/*  font-family: "Montserrat ExtraBold";*/
+/*  letter-spacing: 2px;*/
+/*}*/
+
+/*.three {*/
+/*  background: no-repeat right/50% url("images/fon2.png");*/
+/*  height: 40vh;*/
+/*  background-color: whitesmoke;*/
+/*}*/
+
+
+/*!*sidenav*!*/
+/*.hamburger {*/
+/*  z-index: 1;*/
+/*  cursor: pointer;*/
+/*  color: #6E6CD9;*/
+/*  width: 4%;*/
+/*  height: auto;*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  display: none;*/
+/*  font-synthesis: weight;*/
+/*}*/
+
+/*.side {*/
+/*  position: relative;*/
+/*}*/
+
+/*.sidenav {*/
+/*  z-index: 3;*/
+/*  width: 0;*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  bottom: 0;*/
+/*  background-color: rgba(110, 108, 217, 0.9);*/
+/*  overflow-x: hidden;*/
+/*  transition: 0.5s;*/
+/*  padding-top: 60px;*/
+/*}*/
+
+/*.sidenav li:hover a:not(.closebtn) {*/
+/*  color: #6E6CD9;*/
+/*  font-family: "Montserrat SemiBold";*/
+/*}*/
+
+/*.sidenav li a:not(.closebtn) {*/
+/*  color: white;*/
+/*  font-size: 1vw;*/
+/*}*/
+
+/*.sidenav li:hover:not(.closebtn) {*/
+/*  background-color: white;*/
+/*}*/
+
+/*.sidenav .closebtn {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  right: 25px;*/
+/*  font-size: 36px;*/
+/*  margin-left: 50px;*/
+/*  text-decoration: none;*/
+/*  color: lightgrey;*/
+/*}*/
+
+/*.closebtn:hover {*/
+/*  color: white;*/
+/*}*/
+
+/*@media screen and (max-height: 450px) {*/
+/*  .sidenav {*/
+/*    padding-top: 15px;*/
+/*  }*/
+
+/*  .sidenav a {*/
+/*    font-size: 18px;*/
+/*  }*/
+/*}*/
+/*.mask {*/
+/*  z-index: 2;*/
+/*}*/
+
+/*!*sidenav*!*/
+/*!*sidenav2*!*/
+/*.sidenav2 {*/
+/*  z-index: 3;*/
+/*  height: 0;*/
+/*  width: 5%;*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  margin-left: 0.1%;*/
+/*  background-color: #6E6CD9;*/
+/*  opacity: 1;*/
+/*  overflow-y: hidden;*/
+/*  transition: 0.5s;*/
+/*  border-radius: 20px;*/
+/*}*/
+
+/*.sidenav2 li:hover a:not(.closebtn2) {*/
+/*  color: #6E6CD9;*/
+/*  font-family: "Montserrat SemiBold";*/
+/*}*/
+
+/*.sidenav2 li a:not(.closebtn2) {*/
+/*  color: white;*/
+/*  font-size: 1vw;*/
+/*}*/
+
+/*.sidenav2 li:hover:not(.closebtn2) {*/
+/*  background-color: white;*/
+/*}*/
+
+/*@media screen and (max-height: 450px) {*/
+/*  .sidenav2 {*/
+/*    padding-top: 15px;*/
+/*  }*/
+
+/*  .sidenav2 a {*/
+/*    font-size: 18px;*/
+/*  }*/
+/*}*/
+/*.closebtn2 {*/
+/*  text-decoration: none;*/
+/*  color: white;*/
+/*  font-size: 2.5em;*/
+/*}*/
+
+/*.closebtn2:hover {*/
+/*  color: white;*/
+/*}*/
+
+/*!*sidenav2*!*/
+/*!*tab_menu*!*/
+/*#exTab3 {*/
+/*  padding-left: 0px;*/
+/*  padding-right: 0px;*/
+/*}*/
+
+/*#exTab3 a {*/
+/*  border-radius: 4px 4px 0 0;*/
+/*  text-decoration: none;*/
+/*  color: grey;*/
+/*  padding: 10px 15px 10px;*/
+/*  font-size: 2vw;*/
+/*}*/
+
+/*#exTab3 a.active {*/
+/*  margin-left: 0;*/
+/*  border-radius: 4px 4px 0 0;*/
+/*  text-decoration: none;*/
+/*  color: white;*/
+/*  background-color: #6E6CD9;*/
+/*  font-family: "Montserrat SemiBold";*/
+/*  box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.2);*/
+/*}*/
+
+/*!*tab_menu*!*/
+/*!*filter1*!*/
+/*.z-filter {*/
+/*  z-index: 2;*/
+/*  background: rgba(110, 108, 217, 0.3);*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  margin-top: 6%;*/
+/*  box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);*/
+/*  border-top-right-radius: 15px;*/
+/*  border-bottom-right-radius: 15px;*/
+/*  height: 85%;*/
+/*  width: 22%;*/
+/*}*/
+
+/*.z-filter form {*/
+/*  padding-top: 5%;*/
+/*  width: 100%;*/
+/*  padding-left: 10%;*/
+/*  padding-right: 10%;*/
+/*}*/
+
+/*.z-filter select {*/
+/*  margin-bottom: 15px;*/
+/*  font-size: 1em;*/
+/*}*/
+
+/*.z-filter label {*/
+/*  font-size: 0.8em;*/
+/*}*/
+
+/*.z-filter card {*/
+/*  height: 25%;*/
+/*}*/
+
+/*!*filter*!*/
+/*!*filter2*!*/
+/*.z-filter2 {*/
+/*  z-index: 2;*/
+/*  background: #6e6cd9;*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  margin-top: 5%;*/
+/*  box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);*/
+/*  height: 7%;*/
+/*  width: 98%;*/
+/*}*/
+
+/*!*filter2*!*/
+/*!*filter3*!*/
+/*#SideFil {*/
+/*  z-index: 3;*/
+/*  width: 0;*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  bottom: 0;*/
+/*  background-color: rgba(110, 108, 217, 0.9);*/
+/*  overflow-x: hidden;*/
+/*  transition: 0.5s;*/
+/*}*/
+
+/*.nav3 {*/
+/*  padding-top: 20%;*/
+/*  position: relative;*/
+/*  background-color: #6E6CD9;*/
+/*  height: 100%;*/
+/*  width: 75%;*/
+/*}*/
+
+/*.closebtnf {*/
+/*  text-decoration: none;*/
+/*  color: white;*/
+/*  padding-top: 110%;*/
+/*}*/
+
+/*.closebtnf:hover {*/
+/*  text-decoration: none;*/
+/*  color: white;*/
+/*}*/
+
+/*.logoLine {*/
+/*  z-index: 4;*/
+/*  background: center/contain no-repeat url("images/icons/Line-2.svg");*/
+/*}*/
+
+/*.second_form {*/
+/*  width: 100%;*/
+/*  padding-left: 5%;*/
+/*  padding-right: 5%;*/
+/*  padding-top: 20%;*/
+/*}*/
+
+/*.second_form select {*/
+/*  margin-bottom: 15px;*/
+/*  font-size: 1em;*/
+/*}*/
+
+/*.second_form label {*/
+/*  font-size: 0.8em;*/
+/*}*/
+
+/*.second_form card {*/
+/*  height: 25%;*/
+/*}*/
+
+/*!*filter3*!*/
+/*!*kpi1*!*/
+/*.box_card {*/
+/*  position: absolute;*/
+/*  z-index: 2;*/
+/*  top: 14%;*/
+/*  left: 6%;*/
+/*}*/
+
+/*.p_card {*/
+/*  padding-right: 25%;*/
+/*}*/
+
+/*.p_card .card {*/
+/*  background-color: rgba(110, 108, 217, 0.93);*/
+/*  color: white;*/
+/*  border: none;*/
+/*  margin-bottom: 3%;*/
+/*}*/
+
+/*.green_kpi {*/
+/*  color: darkgreen;*/
+/*  font-size: 1.1vw;*/
+/*}*/
+
+/*.red_kpi {*/
+/*  color: darkred;*/
+/*  font-size: 1.1vw;*/
+/*}*/
+
+/*.title_kpi {*/
+/*  font-size: 1.35vw;*/
+/*}*/
+
+/*.num_kpi {*/
+/*  font-size: 1.7vw;*/
+/*  font-family: "Montserrat SemiBold";*/
+/*}*/
+
+/*!*kpi1*!*/
+/*!*kpi2*!*/
+/*.box_card2 {*/
+/*  position: absolute;*/
+/*  z-index: 2;*/
+/*  top: 10%;*/
+/*  left: 1.7%;*/
+/*  width: 96.5%;*/
+/*}*/
+
+/*.p_card2 .card {*/
+/*  background-color: rgba(110, 108, 217, 0.93);*/
+/*  color: white;*/
+/*  border: none;*/
+/*}*/
+
+/*.green_kpi2 {*/
+/*  color: darkgreen;*/
+/*  font-size: 1.1vw;*/
+/*}*/
+
+/*.red_kpi2 {*/
+/*  color: darkred;*/
+/*  font-size: 1.1vw;*/
+/*}*/
+
+/*.title_kpi2 {*/
+/*  font-size: 1.35vw;*/
+/*}*/
+
+/*.num_kpi2 {*/
+/*  font-size: 1.4vw;*/
+/*  font-family: "Montserrat SemiBold";*/
+/*}*/
+
+/*!*kpi2*!*/
+/*!*kpi3*!*/
+/*.box_card3 {*/
+/*  position: absolute;*/
+/*  z-index: 2;*/
+/*  top: 22%;*/
+/*  left: 80%;*/
+/*}*/
+
+/*.p_card3 {*/
+/*  padding-right: 30%;*/
+/*  padding-left: 10%;*/
+/*}*/
+
+/*.p_card3 .card {*/
+/*  background-color: rgba(110, 108, 217, 0.93);*/
+/*  color: white;*/
+/*  border: none;*/
+/*  margin-bottom: 3%;*/
+/*}*/
+
+/*.green_kpi3 {*/
+/*  color: darkgreen;*/
+/*  font-size: 0.9vw;*/
+/*}*/
+
+/*.red_kpi3 {*/
+/*  color: darkred;*/
+/*  font-size: 0.9vw;*/
+/*}*/
+
+/*.title_kpi3 {*/
+/*  font-size: 1vw;*/
+/*}*/
+
+/*.num_kpi3 {*/
+/*  font-size: 1.5vw;*/
+/*  font-family: "Montserrat SemiBold";*/
+/*}*/
+
+/*!*kpi3*!*/
+/*label {*/
+/*  display: block;*/
+/*}*/
+
+
+/*!*g*!*/
+
+
+/*!*g*!*/
+
+
+
+
+
+/*.board {*/
+/*  width: 80%;*/
+/*  margin-left: 10%;*/
+/*  margin-top: 3%;*/
+/*}*/
+
+/*.nav1 {*/
+/*  padding-top: 20%;*/
+/*  position: relative;*/
+/*  background-color: #6E6CD9;*/
+/*  border-bottom-left-radius: 10px;*/
+/*  border-bottom-right-radius: 10px;*/
+/*  height: 95%;*/
+/*  width: 65%;*/
+/*  margin-left: 20%;*/
+/*}*/
+
+/*.nav2 {*/
+/*  padding-top: 20%;*/
+/*  position: relative;*/
+/*  background-color: #6E6CD9;*/
+/*  border-top-right-radius: 10px;*/
+/*  border-bottom-right-radius: 10px;*/
+/*  height: 95%;*/
+/*  width: 100%;*/
+/*  margin-top: 3%;*/
+/*  margin-right: 6%;*/
+/*}*/
+
+/*.img1 {*/
+/*  width: 100%;*/
+/*  height: auto;*/
+/*}*/
+
+/*.sign {*/
+/*  display: flex;*/
+/*  flex-direction: row-reverse;*/
+/*  align-items: flex-end;*/
+/*}*/
+
+/*.hovervariant:hover {*/
+/*  background-color: #fff;*/
+/*}*/
+
+/*.hovervariant:hover .textchengecolor {*/
+/*  text-decoration-line: none;*/
+/*  color: #6E6CD9;*/
+/*}*/
+
+/*.textchengecolor a {*/
+/*  font-size: 70%;*/
+/*}*/
+
+/*.hovervariant .textchengecolor {*/
+/*  text-decoration-line: none;*/
+/*  color: #ffffff;*/
+/*}*/
+
+/*.HalfTitle {*/
+/*  color: black;*/
+/*  padding-bottom: 40px;*/
+/*  padding-left: 4%;*/
+/*  text-align: left;*/
+/*}*/
+
+/*.hovervariant:hover .logo1 {*/
+/*  background: center/contain no-repeat url("images/icons/Layout_l.svg");*/
+/*}*/
+
+/*.logo1 {*/
+/*  background: center/contain no-repeat url("images/icons/Layout.svg");*/
+/*}*/
+
+/*.hovervariant:hover .logo2 {*/
+/*  background: center/contain no-repeat url("images/icons/Chip_l.svg");*/
+/*}*/
+
+/*.logo2 {*/
+/*  background: center/contain no-repeat url("images/icons/Chip.svg");*/
+/*}*/
+
+/*.hovervariant:hover .logo3 {*/
+/*  background: center/contain no-repeat url("images/icons/Cart_l.svg");*/
+/*}*/
+
+/*.logo3 {*/
+/*  background: center/contain no-repeat url("images/icons/Cart.svg");*/
+/*}*/
+
+/*.hovervariant:hover .logo4 {*/
+/*  background: center/contain no-repeat url("images/icons/Map_l.svg");*/
+/*}*/
+
+/*.logo4 {*/
+/*  background-color: black;*/
+/*  background: center/contain no-repeat url("images/icons/Map.svg");*/
+/*}*/
+
+/*.hovervariant:hover .logo5 {*/
+/*  background: center/contain no-repeat url("images/icons/Bag_l.svg");*/
+/*}*/
+
+/*.logo5 {*/
+/*  background: center/contain no-repeat url("images/icons/Bag.svg");*/
+/*}*/
+
+/*.hovervariant:hover .logo6 {*/
+/*  background: center/contain no-repeat url("images/icons/Configure_l.svg");*/
+/*}*/
+
+/*.logo6 {*/
+/*  background: center/contain no-repeat url("images/icons/Configure_w.svg");*/
+/*}*/
+
+/*.boardTitle {*/
+/*  padding-top: 15px;*/
+/*  padding-bottom: 15px;*/
+/*  padding-left: 60px;*/
+/*  font-family: "Montserrat SemiBold";*/
+/*}*/
+
+/*.description {*/
+/*  font-family: Montserrat;*/
+/*  color: black;*/
+/*  font-size: 1.7em;*/
+/*  text-align: justify;*/
+/*  line-height: 1.5;*/
+/*  text-indent: 1.5em;*/
+/*  */
+/*}*/
+
+/*.theme_label {*/
+/*  font-size: 2vh;*/
+/*}*/
+
+/*.theme_label .form-check {*/
+/*  padding-top: 15px;*/
+/*}*/
+
+/*.carousel_body {*/
+/*  background-color: rgba(181, 76, 167, 0.2);*/
+/*  backdrop-filter: blur(8px);*/
+/*}*/
+
+/*.card_main {*/
+/*  width: 100%;*/
+/*  !*border: 3px solid rgba(181,76,167,0.4) ;*!*/
+/*}*/
+
+/*.card:hover:not(.shadow-none) {*/
+/*  !*border: 2px solid #6E6CD9;*!*/
+/*}*/
+
+/*.titletext a {*/
+/*  font-family: "Montserrat Medium";*/
+/*}*/
+
+/*.boarder .titletext {*/
+/*  text-decoration: none;*/
+/*  color: dimgrey;*/
+/*  font-size: 2vw;*/
+/*}*/
+
+/*.titletext:hover {*/
+/*  color: #6E6CD9;*/
+/*}*/
+
+/*ul.boarder {*/
+/*  margin-bottom: 5px;*/
+/*}*/
+
+/*.screen {*/
+/*  padding: 0px;*/
+/*}*/
+
+/*.titletext.active {*/
+/*  font-family: "Montserrat SemiBold";*/
+/*  color: #6E6CD9;*/
+/*  background-color: #e8e8e8;*/
+/*  border-radius: 10px;*/
+/*}*/
+
+/*.zpanel {*/
+/*  position: absolute;*/
+/*  height: 0;*/
+/*  width: 0;*/
+/*  z-index: 2;*/
+/*}*/
+

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+    color: #111;
+}
+
+
+.draggable {
+    /*height: 9rem;*/
+    /*width: 9rem;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    margin: auto;
+    cursor: move;
+}
+.draggable:hover {
+    opacity: 0.5;
+}
+.droppable {
+    /*margin: 1rem auto;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*flex-direction: column;*/
+    /*text-align: center;*/
+    /*font-size: 4rem;*/
+    /*font-weight: bold;*/
+    /*background-color: #fff;*/
+    /*border: 3px dashed #111;*/
+    transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+    /*overflow: hidden;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center*/
+}
+
+.fon_maket{
+    z-index: 0;
+    height: 450px;
+
+}
+.droppable span {
+    font-size: 1.25rem;
+    pointer-events: none; /* The element is never the target of pointer events */
+}
+
+/* Drag and Drop Related Styling */
+
+.droppable.droppable-hover {
+    /* background-color: #bee3f0; */
+    border-width: 5px;
+    transform: scale(1.1);
+}
+/*.droppable.dropped {*/
+/*    border-style: solid;*/
+/*    color: #fff;*/
+/*}*/
+
+.draggable.dragged {
+   /*// user-select: none;*/
+   /* opacity: 0.1;*/
+   /* cursor: default;*/
+}
+/*.draggable.dragged:hover {*/
+/*    opacity: 0.1;*/
+/*}*/
+
+@media (max-width: 600px) {
+    html { font-size: 14px; }
+    .draggable-elements { margin: 1.5rem; }
+}
+
+.draggable-elements {
+    height: auto;
+    overflow-y: scroll;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+
+}
+.draggable-elements::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,0.5);
+}
+.draggable-elements::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+.right_modal_part{
+
+}
+
+.insertGraph{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.save_btn{
+    border-radius: 6px;
+    /*background-color: white;*/
+    background-color: #0AD275;
+    color: white;
+    font-family: "Montserrat Medium";
+    text-transform: uppercase;
+    border: white 0px;
+    height: 40px;
+    width: 20vw!important;
+}
+.save_btn:hover{
+    background-color: white;
+    color: #0AD275;
+}
+.droppable{
+    background: url('images/dd3.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.remove_graph{
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 6px;
+    font-size: 0.75em;
+    background-color: rgba(256, 256, 256, 0.8);
+    color: #DC3545;
+    font-family: "Montserrat Medium";
+    border: #DC3545 1px solid;
+    padding: 5px 8px;
+}
+.remove_graph:hover{
+    background-color: #DC3545;
+    color: white;
+}

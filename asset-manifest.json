@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/dashshop/static/css/main.5f6246d9.chunk.css",
+    "main.js": "/dashshop/static/js/main.46846363.chunk.js",
+    "main.js.map": "/dashshop/static/js/main.46846363.chunk.js.map",
+    "runtime-main.js": "/dashshop/static/js/runtime-main.c5f2e3fc.js",
+    "runtime-main.js.map": "/dashshop/static/js/runtime-main.c5f2e3fc.js.map",
+    "static/css/2.acf9cc11.chunk.css": "/dashshop/static/css/2.acf9cc11.chunk.css",
+    "static/js/2.d311e648.chunk.js": "/dashshop/static/js/2.d311e648.chunk.js",
+    "static/js/2.d311e648.chunk.js.map": "/dashshop/static/js/2.d311e648.chunk.js.map",
+    "static/js/3.ef69ed39.chunk.js": "/dashshop/static/js/3.ef69ed39.chunk.js",
+    "static/js/3.ef69ed39.chunk.js.map": "/dashshop/static/js/3.ef69ed39.chunk.js.map",
+    "index.html": "/dashshop/index.html",
+    "static/css/2.acf9cc11.chunk.css.map": "/dashshop/static/css/2.acf9cc11.chunk.css.map",
+    "static/css/main.5f6246d9.chunk.css.map": "/dashshop/static/css/main.5f6246d9.chunk.css.map",
+    "static/js/2.d311e648.chunk.js.LICENSE.txt": "/dashshop/static/js/2.d311e648.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/dashshop/static/media/fon2.a43342e8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c5f2e3fc.js",
+    "static/css/2.acf9cc11.chunk.css",
+    "static/js/2.d311e648.chunk.js",
+    "static/css/main.5f6246d9.chunk.css",
+    "static/js/main.46846363.chunk.js"
+  ]
+}
