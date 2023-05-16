@@ -59,7 +59,7 @@
       "react-app/jest"
     ]
   },
-  "proxy": "http://dashshop-back.ru/",
+  "proxy": "https://dashshop-back.ru/",
   "browserslist": {
     "production": [
       ">0.2%",

@@ -1,1 +1,1 @@
-export const baseUrl = 'http://dashshop-back.ru';
+export const baseUrl = 'https://dashshop-back.ru';
