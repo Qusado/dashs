@@ -9,6 +9,7 @@ import {ViewExampleFilter} from "../Component_example/ViewExampleFilter";
 import {$host} from "../../http";
 import {baseUrl} from "../baseRoute";
 import {Filter_modal} from "../modal_filter/Filter_modal";
+import {Filter_card} from "../modal_filter/filter_card";
 
 
 
@@ -36,7 +37,17 @@ export const Filter = ({form, setForm}) =>{
     }) ;
     const [modalViewExpActive, setModalViewExpActive] = useState(false);
     const [modalViewFilterActive, setModalFilterActive] = useState(false);
-    const [f, setF] = useState([]);
+    const [f, setF] = useState([
+        <Filter_card num={1} title={"Ответственный менеджер"} units={"ФИО"} business={"Для фильтрации отчета по ответственному менеджеру (работающий над текущей сделкой"}/>,
+        <Filter_card num={2} title={"Дом ( или земельные участки, здания, сооружения и иные объекты)"} units={"Объект недвижимости"} business={"Выбор объекта недвижимости (земельные участки, здания, сооружения и иные объекты) Для фильтрации отчета и анализа информации по конкретному объекту недвижимости"}/>,
+        <Filter_card num={1} title={"ЖК, наименование"} units={"ЖК"} business={"Для фильтрации отчета по конкретному ЖК"}/>,
+        <Filter_card num={1} title={"Сегмент, наименование"} units={"Сегмент"} business={"Для фильтрации отчета по конкретному сегменту"}/>,
+        <Filter_card num={1} title={"Отчетные года"} units={"Год"} business={"Перечень годов, за которые имеется отчетность"}/>,
+
+
+    ]);
+
+
     $(".praon30").on("click",function() {
         $(".praon30").removeClass('current_choise');
         $(this).addClass('current_choise');

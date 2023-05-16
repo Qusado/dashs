@@ -224,181 +224,51 @@ export const Lay = ({form, setForm, createMaket, current_kpi_panel, setCurrent_k
                     </div>
                 </div>
                 <div className="col-12 mt-4">
-                    <div className="row justify-content-center">
-                        <div className="col-8" style={{marginRight:'20px', marginBottom:'3vh'}}>
-                            {/*form.menu_id!==0 && form.kpi_id!==0 && form.filter_id!==0 && form.visual_id!==0 &&*/}
-                            {
-                                <PDFExport paperSize="auto" margin={20} fileName={`Report for ${new Date().getFullYear()}`}>
-                                    <div ref={box}>
+                        <PDFExport paperSize="auto" margin={20} fileName={`Report for ${new Date().getFullYear()}`}>
+                            <div ref={box}>
+                                <div className="row justify-content-center">
+                                    <div className="col-8" style={{marginRight:'20px', marginBottom:'3vh'}}>
                                         <div className="row px-4">
                                             <h6 className=""><strong>Прототип</strong></h6>
                                         </div>
                                         <div className="maket" id="maket">
                                             <View_maket form={form}/>
                                         </div>
-                                        {/*<div className="row px-4">*/}
-                                        {/*    <h6 className="mt-3"><strong>Графики</strong></h6>*/}
-                                        {/*    {charts ?*/}
-                                        {/*        <div className="row">*/}
-                                        {/*            <div className="col-10 row">*/}
-                                        {/*                <div className="col-4 mb-2" id="1"*/}
-                                        {/*                     style={{paddingLeft: "20px", paddingRight: "1px"}}>*/}
-                                        {/*                    <input type="text"*/}
-                                        {/*                           className="form-control form-control-sm mb-1"*/}
-                                        {/*                           id="input1" value={form.g1_title} disabled/>*/}
-                                        {/*                    <img className="pdf_img"*/}
-                                        {/*                         src={baseUrl + `/graph/${graphs[0].img}`}/>*/}
-                                        {/*                    <figure className="text-end">*/}
-                                        {/*                        <p>{graphs[0].title}</p>*/}
-                                        {/*                    </figure>*/}
-                                        {/*                </div>*/}
-                                        {/*                <div className="col-4 mb-2" id="2"*/}
-                                        {/*                     style={{paddingLeft: "20px", paddingRight: "1px"}}>*/}
-                                        {/*                    <input type="text"*/}
-                                        {/*                           className="form-control form-control-sm mb-1"*/}
-                                        {/*                           id="input2" value={form.g2_title} disabled/>*/}
-                                        {/*                    <img className="pdf_img"*/}
-                                        {/*                         src={baseUrl + `/graph/${graphs[1].img}`}/>*/}
-                                        {/*                    <figure className="text-end">*/}
-                                        {/*                        <p>{graphs[1].title}</p>*/}
-                                        {/*                    </figure>*/}
-                                        {/*                </div>*/}
-                                        {/*                <div className="col-4 mb-2" id="3"*/}
-                                        {/*                     style={{paddingLeft: "20px", paddingRight: "1px"}}>*/}
-                                        {/*                    <input type="text"*/}
-                                        {/*                           className="form-control form-control-sm mb-1"*/}
-                                        {/*                           id="input3" value={form.g3_title} disabled/>*/}
-                                        {/*                    <img className="pdf_img"*/}
-                                        {/*                         src={baseUrl + `/graph/${graphs[2].img}`}/>*/}
-                                        {/*                    <figure className="text-end">*/}
-                                        {/*                        <p>{graphs[2].title}</p>*/}
-                                        {/*                    </figure>*/}
-                                        {/*                </div>*/}
-                                        {/*                <div className="col-4 mb-4" id="4"*/}
-                                        {/*                     style={{paddingLeft: "20px", paddingRight: "1px"}}>*/}
-                                        {/*                    <input type="text"*/}
-                                        {/*                           className="form-control form-control-sm mb-1"*/}
-                                        {/*                           id="input4" value={form.g4_title} disabled/>*/}
-                                        {/*                    <img className="pdf_img"*/}
-                                        {/*                         src={baseUrl + `/graph/${graphs[3].img}`}/>*/}
-                                        {/*                    <figure className="text-end">*/}
-                                        {/*                        <p>{graphs[3].title}</p>*/}
-                                        {/*                    </figure>*/}
-                                        {/*                </div>*/}
-                                        {/*                <div className="col-4 mb-4" id="5"*/}
-                                        {/*                     style={{paddingLeft: "20px", paddingRight: "1px"}}>*/}
-                                        {/*                    <input type="text"*/}
-                                        {/*                           className="form-control form-control-sm mb-1"*/}
-                                        {/*                           id="input5" value={form.g5_title} disabled/>*/}
-                                        {/*                    <img className="pdf_img"*/}
-                                        {/*                         src={baseUrl + `/graph/${graphs[4].img}`}/>*/}
-                                        {/*                    <figure className="text-end">*/}
-                                        {/*                        <p>{graphs[4].title}</p>*/}
-                                        {/*                    </figure>*/}
-                                        {/*                </div>*/}
-                                        {/*                <div className="col-4 mb-4" id="6"*/}
-                                        {/*                     style={{paddingLeft: "20px", paddingRight: "1px"}}>*/}
-                                        {/*                    <input type="text" name="input_group"*/}
-                                        {/*                           className="form-control form-control-sm mb-1"*/}
-                                        {/*                           id="input6" value={form.g6_title} disabled/>*/}
-                                        {/*                    <img className="pdf_img"*/}
-                                        {/*                         src={baseUrl + `/graph/${graphs[5].img}`}/>*/}
-                                        {/*                    <figure className="text-end">*/}
-                                        {/*                        <p>{graphs[5].title}</p>*/}
-                                        {/*                    </figure>*/}
-                                        {/*                </div>*/}
-                                        {/*            </div>*/}
-                                        {/*        </div>*/}
-                                        {/*        :*/}
-                                        {/*        <div className="h6 mt-1">Графики не указаны</div>*/}
-                                        {/*    }*/}
-                                        {/*</div>*/}
-                                        {/*<div className="row px-4">*/}
-                                        {/*    <h6 className="mt-3"><strong>Показатели</strong></h6>*/}
-                                        {/*    {cards.length>=1 ? cards.map(card =>*/}
-                                        {/*        <div className="col-6 mb-2"*/}
-                                        {/*             style={{paddingLeft: "20px", paddingRight: "1px"}}>*/}
-                                        {/*            <div className="card p-2" style={{backgroundColor: '#E9ECEF'}}>*/}
-                                        {/*                <div className="text-center mb-0"><strong>{card.title}</strong></div>*/}
-                                        {/*                <div className="text-center p-0 mb-0" style={{fontSize: "1.5rem"}}><strong>{card.fact}</strong></div>*/}
-                                        {/*                <div className="text-center p-0 mb-0"><p className="fw-light mb-0">{card.plan}</p></div>*/}
-                                        {/*                <div className="text-center mb-0">{card.per_dev && <span>&#8679; %</span>}{card.num_dev && <span>&#8679; $</span>}</div>*/}
-                                        {/*                <div className="text-center p-0"><p className="fw-light">{card.graph}</p></div>*/}
-
-                                        {/*            </div>*/}
-                                        {/*        </div>*/}
-
-                                        {/*        )*/}
-
-
-                                        {/*        :*/}
-                                        {/*        <div className="h6 mt-1">Показатели не указаны</div>*/}
-                                        {/*    }*/}
-                                        {/*</div>*/}
-
-                                        {/*<h6 className="px-4" >Комментарии</h6>*/}
-                                        {/*<ul style={{listStyle:'none'}}>*/}
-                                        {/*    <li className="mb-3">*/}
-                                        {/*        <p className="mb-1"><strong>Email</strong></p>*/}
-                                        {/*        <input style={{border:"none"}} id="comment_email"/>*/}
-                                        {/*    </li>*/}
-                                        {/*    <li className="mb-3">*/}
-                                        {/*        <p className="mb-1"><strong>Заказчик</strong>*/}
-                                        {/*        </p><input style={{border:"none"}} id="comment_client"/>*/}
-                                        {/*    </li>*/}
-                                        {/*    <li className="mb-3">*/}
-                                        {/*        <p className="mb-1"><strong>Проектный менеджер</strong>*/}
-                                        {/*        </p><input style={{border:"none"}} id="comment_pm"/>*/}
-                                        {/*    </li>*/}
-                                        {/*    <li className="mb-3">*/}
-                                        {/*        <p className="mb-1"><strong>Исполнитель</strong>*/}
-                                        {/*        </p><input style={{border:"none"}} id="comment_employer"/>*/}
-                                        {/*    </li>*/}
-                                        {/*    <li className="mb-3">*/}
-                                        {/*        <p className="mb-1"><strong>Компания</strong>*/}
-                                        {/*        </p><input style={{border:"none"}} id="comment_company"/>*/}
-                                        {/*    </li>*/}
-                                        {/*    <li className="mb-3">*/}
-                                        {/*        <p className="mb-1"><strong>Прогнозируемая цена</strong>*/}
-                                        {/*        </p><input style={{border:"none"}} id="comment_cost"/>*/}
-                                        {/*    </li>*/}
-                                        {/*</ul>*/}
                                     </div>
-                                </PDFExport>
-                            }
-                        </div>
+                                <div className="col-3">
+                                    <form>
+                                        <h5 className="pt-0 pb-2">Комментарии к отчету</h5>
+                                        <div className="form-floating mb-2">
+                                            <input type="email" className="form-control form-control-sm" id="floatingInput" />
+                                            <label htmlFor="floatingInput">Email address</label>
+                                        </div>
+                                        <div className="form-floating mb-2">
+                                            <input type="email" className="form-control" id="floatingInput" />
+                                            <label htmlFor="floatingInput">Заказчик</label>
+                                        </div>
+                                        <div className="form-floating mb-2">
+                                            <input type="email" className="form-control" id="floatingInput" />
+                                            <label htmlFor="floatingInput">Проектный менеджер</label>
+                                        </div>
+                                        <div className="form-floating mb-2">
+                                            <input type="email" className="form-control" id="floatingInput" />
+                                            <label htmlFor="floatingInput">Исполнитель</label>
+                                        </div>
+                                        <div className="form-floating mb-2">
+                                            <input type="email" className="form-control" id="floatingInput" />
+                                            <label htmlFor="floatingInput">Компания</label>
+                                        </div>
+                                        <div className="form-floating mb-2">
+                                            <input type="email" className="form-control" id="floatingInput" />
+                                            <label htmlFor="floatingInput">Прогнозируемая цена</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            </div>
+                        </PDFExport>
 
-                        <div className="col-3">
-                            <form>
-                                <h5 className="pt-0 pb-2">Комментарии к отчету</h5>
-                                <div className="form-floating mb-2">
-                                    <input type="email" className="form-control form-control-sm" id="floatingInput" onChange={emailHandler}/>
-                                    <label htmlFor="floatingInput">Email address</label>
-                                </div>
-                                <div className="form-floating mb-2">
-                                    <input type="email" className="form-control" id="floatingInput" onChange={clientHandler}/>
-                                    <label htmlFor="floatingInput">Заказчик</label>
-                                </div>
-                                <div className="form-floating mb-2">
-                                    <input type="email" className="form-control" id="floatingInput" onChange={pmHandler}/>
-                                    <label htmlFor="floatingInput">Проектный менеджер</label>
-                                </div>
-                                <div className="form-floating mb-2">
-                                    <input type="email" className="form-control" id="floatingInput" onChange={employerHandler}/>
-                                    <label htmlFor="floatingInput">Исполнитель</label>
-                                </div>
-                                <div className="form-floating mb-2">
-                                    <input type="email" className="form-control" id="floatingInput" onChange={companyHandler}/>
-                                    <label htmlFor="floatingInput">Компания</label>
-                                </div>
-                                <div className="form-floating mb-2">
-                                    <input type="email" className="form-control" id="floatingInput" onChange={costHandler}/>
-                                    <label htmlFor="floatingInput">Прогнозируемая цена</label>
-                                </div>
-                            </form>
-                        </div>
 
-                    </div>
                     <div className="row">
                         <div className="col-12 px-5" style={{marginBottom:'20vh'}}>
                             <hr className="k-hr"/>
@@ -445,21 +315,21 @@ export const Lay = ({form, setForm, createMaket, current_kpi_panel, setCurrent_k
                                         <td>Фильтр</td>
                                         <td>Сегмент, наименование</td>
                                         <td>Сегмент</td>
-                                        <td> Для фильтрации отчета по конкретному сегменту</td>
+                                        <td>Для фильтрации отчета по конкретному сегменту</td>
                                         <td>Чекбокс</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">5</th>
                                         <td>Фильтр</td>
-                                        <td>Например: 2015</td>
+                                        <td>Отчетные года</td>
                                         <td>Год</td>
                                         <td>Перечень годов, за которые имеется отчетность</td>
-                                        <td>Ползунок</td>
+                                        <td>Чекбокс</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">6</th>
                                         <td>Показатель</td>
-                                        <td>-</td>
+                                        <td>Процентное отклонение</td>
                                         <td>Всего (руб)</td>
                                         <td>Общая стоимость жилого комплекса</td>
                                         <td>Сумма по fact_properties_custom_fields[Price], с условием если ПУСТО то 0</td>
@@ -467,7 +337,7 @@ export const Lay = ({form, setForm, createMaket, current_kpi_panel, setCurrent_k
                                     <tr>
                                         <th scope="row">7</th>
                                         <td>Показатель</td>
-                                        <td>-</td>
+                                        <td>Процентное отклонение</td>
                                         <td>Всего (шт)</td>
                                         <td>Общее кол-во квартир в жк</td>
                                         <td>Количесвто уникальных квартир = DISTINCTCOUNT ( fact_properties_custom_fields[properties_id] )</td>
@@ -475,7 +345,7 @@ export const Lay = ({form, setForm, createMaket, current_kpi_panel, setCurrent_k
                                     <tr>
                                         <th scope="row">8</th>
                                         <td>Показатель</td>
-                                        <td>-</td>
+                                        <td>Процентное отклонение</td>
                                         <td>Цена за м2 (руб)</td>
                                         <td>Стоимость квартиры\(Площадь без балкона + Площадь балкона * каоэффициент)</td>
                                         <td>Отображение: числом и в процентах; Сумма по fact_properties_custom_fields[Price] делим на fact_properties_custom_fields[area_balcony] + fact_properties_custom_fields[area_without_balcony] ) *  # коэффициент при старте'[коэффициент при старте]</td>
@@ -483,7 +353,7 @@ export const Lay = ({form, setForm, createMaket, current_kpi_panel, setCurrent_k
                                     <tr>
                                         <th scope="row">9</th>
                                         <td>Показатель</td>
-                                        <td>-</td>
+                                        <td>Процентное отклонение</td>
                                         <td>Остатки (м2)</td>
                                         <td>Сумма площади квартир,  с коэфициентом балкона 0,5. если способ покупки по ДДУ или цессии, если ДКП то с коэфициентом балкона 1 (в статусе Profitbase "свободно", "бронь" или "на оформлении")</td>
                                         <td>{` Сумма площади квартир = ( [# AreaWithBalconyDynamic] => фильтр по статусу Profitbase = dim_properties_statuses[base_status] IN { EXECUTION } если # коэффициент при старте'[коэффициент при старте] = 0,5 в противном случае  Сумма площади квартир = ( [# AreaWithBalconyDynamic]
@@ -493,7 +363,7 @@ export const Lay = ({form, setForm, createMaket, current_kpi_panel, setCurrent_k
                                     <tr>
                                         <th scope="row">10</th>
                                         <td>Показатель</td>
-                                        <td>-</td>
+                                        <td>Процентное отклонение</td>
                                         <td>Бюджет (руб)</td>
                                         <td>Cтоимость проданных квартир</td>
                                         <td>{` "Бюджет = (сумма 'fact_leads_custom_fields'[sale],  фильтр Profitbase dim_properties_statuses[base_status]
