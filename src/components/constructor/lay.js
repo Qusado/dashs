@@ -371,20 +371,20 @@ export const Lay = ({form, setForm, createMaket, current_kpi_panel, setCurrent_k
                                         </td>
                                     </tr>
 
+                                    {/*<tr>*/}
+                                    {/*    <th scope="row">11</th>*/}
+                                    {/*    <td>Пузырьковая диаграмма рассеяния (1)</td>*/}
+                                    {/*    <td>Штуки</td>*/}
+                                    {/*    <td>Остатки</td>*/}
+                                    {/*    <td>"Остаток квартир в продаже штуки.   какой объем объектов в жилом комплексе в продаже,*/}
+                                    {/*        % - остаток от общего объема жилого комплекса"*/}
+                                    {/*    </td>*/}
+                                    {/*    <td>{` Количество уникальных по полю fact_properties_events_change_status[properties_id] */}
+                                    {/*    имеющие статус dim_properties_statuses[base_status] = { AVAILABLE; BOOKED; EXECUTION }`}</td>*/}
+                                    {/*</tr>*/}
                                     <tr>
                                         <th scope="row">11</th>
-                                        <td>Пузырьковая диаграмма рассеяния (1)</td>
-                                        <td>Штуки</td>
-                                        <td>Остатки</td>
-                                        <td>"Остаток квартир в продаже штуки.   какой объем объектов в жилом комплексе в продаже,
-                                            % - остаток от общего объема жилого комплекса"
-                                        </td>
-                                        <td>{` Количество уникальных по полю fact_properties_events_change_status[properties_id] 
-                                        имеющие статус dim_properties_statuses[base_status] = { AVAILABLE; BOOKED; EXECUTION }`}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">12</th>
-                                        <td>Гистограмма (2)
+                                        <td>Гистограмма (1)
                                         </td>
                                         <td>Дни</td>
                                         <td>Средний срок сделки</td>
@@ -392,18 +392,18 @@ export const Lay = ({form, setForm, createMaket, current_kpi_panel, setCurrent_k
                                         <td>Кол-во дней от dim_houses[dev_start] до dim_houses[dev_end] / последний день для выбраного месяца = DAY ( EOMONTH ( MIN ( 'Dim_Date'[Date] ); 0 ) )
                                         </td>
                                     </tr>
+                                    {/*<tr>*/}
+                                    {/*    <th scope="row">13</th>*/}
+                                    {/*    <td>Гистограмма (3)*/}
+                                    {/*    </td>*/}
+                                    {/*    <td>Месяца</td>*/}
+                                    {/*    <td>Срок строительства</td>*/}
+                                    {/*    <td>Дата окончания строительства - Дата начала строительства</td>*/}
+                                    {/*    <td>Кол-во дней от dim_houses[dev_start] до dim_houses[dev_end] / последний день для выбраного месяца = DAY ( EOMONTH ( MIN ( 'Dim_Date'[Date] ); 0 ) )</td>*/}
+                                    {/*</tr>*/}
                                     <tr>
-                                        <th scope="row">13</th>
-                                        <td>Гистограмма (3)
-                                        </td>
-                                        <td>Месяца</td>
-                                        <td>Срок строительства</td>
-                                        <td>Дата окончания строительства - Дата начала строительства</td>
-                                        <td>Кол-во дней от dim_houses[dev_start] до dim_houses[dev_end] / последний день для выбраного месяца = DAY ( EOMONTH ( MIN ( 'Dim_Date'[Date] ); 0 ) )</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">14</th>
-                                        <td>Горизонтальная гистограмма (4)
+                                        <th scope="row">12</th>
+                                        <td>Горизонтальная гистограмма (2)
                                         </td>
                                         <td>М2</td>
                                         <td>Количество проданных квартир</td>
@@ -411,25 +411,25 @@ export const Lay = ({form, setForm, createMaket, current_kpi_panel, setCurrent_k
                                         <td>м2 площадь с коэф. = (fact_properties_custom_fields[area_balcony] + fact_properties_custom_fields[area_without_balcony] ) *  # коэффициент при старте'[коэффициент при старте]); фильтр по статусу Profitbase = dim_properties_statuses[base_status] = "SOLD"</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">15</th>
-                                        <td>Гистограмма с групировкой (5)
+                                        <th scope="row">13</th>
+                                        <td>Гистограмма с групировкой (3)
                                         </td>
                                         <td>М2</td>
                                         <td>Усредненный темп продаж</td>
                                         <td>Сколько планируем продавать в среднем  в месяц</td>
                                         <td>м2 площадь с коэф. = ((fact_properties_custom_fields[area_balcony] + fact_properties_custom_fields[area_without_balcony] ) *  # коэффициент при старте'[коэффициент при старте]); фильтр по статусу Profitbase = dim_properties_statuses[base_status] = "SOLD") / Срок продаж мес = (dim_houses[sales_start] до dim_houses[dev_end] / последний день для выбраного месяца = DAY ( EOMONTH ( MIN ( 'Dim_Date'[Date] ); 0 ) ) )</td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">16</th>
-                                        <td>Круговая диаграмма (6)
-                                        </td>
-                                        <td></td>
-                                        <td>Остаток по сегментам</td>
-                                        <td> визуальное отображения остатка квартир  (руб, м2, шт)</td>
-                                        <td>"В зависимости от выбранного типа (руб; шт; м)
-                                            выводится ранее описанные: [# Остатки руб];  [# Остатки шт]; [# Остатки м2]"
-                                        </td>
-                                    </tr>
+                                    {/*<tr>*/}
+                                    {/*    <th scope="row">16</th>*/}
+                                    {/*    <td>Круговая диаграмма (6)*/}
+                                    {/*    </td>*/}
+                                    {/*    <td></td>*/}
+                                    {/*    <td>Остаток по сегментам</td>*/}
+                                    {/*    <td> визуальное отображения остатка квартир  (руб, м2, шт)</td>*/}
+                                    {/*    <td>"В зависимости от выбранного типа (руб; шт; м)*/}
+                                    {/*        выводится ранее описанные: [# Остатки руб];  [# Остатки шт]; [# Остатки м2]"*/}
+                                    {/*    </td>*/}
+                                    {/*</tr>*/}
                                     </tbody>
                                 </table>
                             </PDFExport>
